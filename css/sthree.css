@@ -1,0 +1,28 @@
+/* SECTION THREE STYLING */
+
+
+/* HORARIO BOX STYLING */
+.horario-box {
+    border: 2px solid black;
+    color: lightblue;
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+  
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+  .horario-box h4 {
+    font-size: 2rem;
+    text-decoration: underline 2px;
+  
+    grid-column: 1 / 3;
+    text-align: center;
+  }
+  .horario-box p {
+    border: 2px solid black;
+    line-height: 1.5rem;
+    padding: 20px;
+    
+  }

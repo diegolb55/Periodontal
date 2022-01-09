@@ -1,0 +1,24 @@
+/* SECTION TWO STYLING */
+
+#decor-img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* INFO BOX STYLING */
+.info-box {
+  border: 2px solid black;
+  color: lightblue;
+  width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+}
+.info-box h3 {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.info-box p {
+  text-align: center;
+  font-size: 1.5rem;
+}
