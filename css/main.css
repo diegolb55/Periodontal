@@ -29,3 +29,22 @@ header {
   font-size: 1.2rem;
 }
 
+
+/* SECTION CONTROL */
+section {
+  border: 2px dotted black;
+}
+.section-one {
+  display: flex;
+  flex-direction: column;
+}
+.section-four {
+  color: lightblue;
+}
+
+.socials {
+  background: lightblue;
+  height: 300px;
+  margin-top: 50px;
+
+}

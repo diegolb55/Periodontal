@@ -1,0 +1,33 @@
+/* SECTION FOUR STYLING */
+
+
+.section-four h3 {
+    text-align: center;
+}
+
+/* Holds all the iboxes inside */
+.icons {
+    border: 2px solid black;
+
+    width: 70%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* Holds an icon-container and h4 */
+.ibox {
+    border: 2px solid red;
+    margin: 20px;
+}
+.icon-container {
+    border: 3px solid lightblue;
+    border-radius: 100%;
+    height: 200px;
+    width: 200px;
+}
+.ibox h4 {
+    text-align: center;
+    font-size: 1.5rem;
+}
