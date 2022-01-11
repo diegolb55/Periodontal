@@ -1,26 +1,58 @@
+// import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.module.js';
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.110/examples/jsm/controls/OrbitControls.js';
 
-/**
- * Base
- */
+
+
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
 
-// Scene 
+// Scene
 const scene = new THREE.Scene()
 
-// Texture
-const textureLoader = new THREE.TextureLoader()
-
-
 /**
- * Objects
+ * Textures
  */
-
+const textureLoader = new THREE.TextureLoader()
+const particleTexture = textureLoader.load('/images/particle.png')
 
 /**
  * Particles
  */
+// Geometry
+const particlesGeometry = new THREE.BufferGeometry()
+const count = 50000
 
+const positions = new Float32Array(count * 3)
+const colors = new Float32Array(count * 3)
+
+for(let i = 0; i < count * 3; i++)
+{
+    positions[i] = (Math.random() - 0.5) * 10
+    colors[i] = Math.random()
+}
+
+particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
+particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
+
+// Material
+const particlesMaterial = new THREE.PointsMaterial()
+
+particlesMaterial.size = 0.1
+particlesMaterial.sizeAttenuation = true
+
+// particlesMaterial.color = new THREE.Color('#ff88cc')
+
+particlesMaterial.transparent = true
+particlesMaterial.alphaMap = particleTexture
+// particlesMaterial.alphaTest = 0.01
+// particlesMaterial.depthTest = false
+particlesMaterial.depthWrite = false
+particlesMaterial.blending = THREE.AdditiveBlending
+particlesMaterial.vertexColors = true
+
+// Points
+const particles = new THREE.Points(particlesGeometry, particlesMaterial)
+scene.add(particles)
 
 /**
  * Sizes
@@ -29,7 +61,8 @@ const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
 }
-window.addEventListener('resize', () => 
+
+window.addEventListener('resize', () =>
 {
     // Update sizes
     sizes.width = window.innerWidth
@@ -45,30 +78,24 @@ window.addEventListener('resize', () =>
 })
 
 /**
- * Lights
- */
-const directionalLight = new THREE.DirectionalLight('#ffffff', 1)
-directionalLight.position.set(1, 1, 0)
-scene.add(directionalLight)
-
-/**
  * Camera
  */
-// Group
-const cameraGroup = new THREE.Group()
-scene.add(cameraGroup)
+// Base camera
+const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
+// camera.position.y = 3
+camera.position.z = 2
+scene.add(camera)
 
-// Base Camera
-const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 100)
-camera.position.z = 6
-cameraGroup.add(camera)
+// Controls
+const controls = new OrbitControls(camera, canvas)
+controls.enableDamping = true
 
 /**
  * Renderer
  */
 const renderer = new THREE.WebGLRenderer({
     canvas: canvas,
-    alpha: true
+    alpha: true,
 })
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
@@ -77,24 +104,29 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
  * Animate
  */
 const clock = new THREE.Clock()
-let previousTime = 0
 
 const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
-    const deltaTime = elapsedTime - previousTime
-    previousTime = elapsedTime
 
-    // Animate Meshes
+    //Update particles
+    for(let i = 0; i < count; i++)
+    {
+        let i3 = i * 3
 
-    // Animate Camera
+        const x = particlesGeometry.attributes.position.array[i3]
+        particlesGeometry.attributes.position.array[i3 + 1] = Math.sin(elapsedTime + x)
+    }
+    particlesGeometry.attributes.position.needsUpdate = true
+
+    // Update controls
+    controls.update()
 
     // Render
     renderer.render(scene, camera)
 
     // Call tick again on the next frame
     window.requestAnimationFrame(tick)
-
 }
 
 tick()
