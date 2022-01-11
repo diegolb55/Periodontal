@@ -1,5 +1,4 @@
 .topnav {
-    /* border: 2px solid black; */
     /* overflow: hidden; */
     
     position: absolute;
@@ -34,7 +33,9 @@
     display: none;
     color: rgb(54, 163, 199);
     transform: scale(1.5);
-    margin: 15px 50px;
+    /* margin: 15px 50px; */
+    margin-top: 15px;
+    margin-right: 50px;
   }
   
   @media screen and (max-width: 730px) {

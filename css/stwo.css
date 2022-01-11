@@ -1,24 +1,47 @@
 /* SECTION TWO STYLING */
 
-#decor-img {
-    display: block;
-    margin: 0 auto;
-}
-
 /* INFO BOX STYLING */
 .info-box {
-  border: 2px solid black;
   color: lightblue;
-  width: 70%;
-  margin: 20px auto;
-  padding: 20px;
 }
 .info-box h3 {
-  font-size: 2rem;
-  line-height: 1;
+  line-height: .8;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+#decor::after{
+  content:'';
+  display: block;
+  background: lightblue;
+  height: 100px;
+  width: 258px;
+  opacity: .5;
+  position: absolute;
+  top: -30%;
+  right: 0;
 }
 
 .info-box p {
   text-align: center;
-  font-size: 1.5rem;
+}
+
+
+/* image holder */
+.img-container {
+  position: relative;
+}
+.img-container::after {
+  content:'';
+  display: block;
+  background: rgb(194, 221, 229);
+  height: 100px;
+  width: 400px;
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  
+}
+.section-two img {
+  display: block;
 }
