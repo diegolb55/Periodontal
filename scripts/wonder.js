@@ -20,7 +20,7 @@ const particleTexture = textureLoader.load('images/particle.png')
  */
 // Geometry
 const particlesGeometry = new THREE.BufferGeometry()
-const count = 50000
+const count = 600
 
 const positions = new Float32Array(count * 3)
 const colors = new Float32Array(count * 3)
@@ -28,7 +28,11 @@ const colors = new Float32Array(count * 3)
 for(let i = 0; i < count * 3; i++)
 {
     positions[i] = (Math.random() - 0.5) * 10
-    colors[i] = Math.random()
+    // colors[i] = Math.random()
+    colors[i*3] = 0
+    colors[i*3 + 1] = 1
+    colors[i*3 + 2] = 1
+
 }
 
 particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
@@ -37,7 +41,7 @@ particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
 // Material
 const particlesMaterial = new THREE.PointsMaterial()
 
-particlesMaterial.size = 0.1
+particlesMaterial.size = 0.2
 particlesMaterial.sizeAttenuation = true
 
 // particlesMaterial.color = new THREE.Color('#ff88cc')
@@ -80,15 +84,31 @@ window.addEventListener('resize', () =>
 /**
  * Camera
  */
+// Group
+const cameraGroup = new THREE.Group()
+scene.add(cameraGroup)
+
 // Base camera
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-// camera.position.y = 3
-camera.position.z = 2
-scene.add(camera)
+const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 100)
+camera.position.z = 10
+cameraGroup.add(camera)
 
 // Controls
 const controls = new OrbitControls(camera, canvas)
 controls.enableDamping = true
+
+/**
+ * Cursor
+ */
+const cursor = {}
+cursor.x = 0
+cursor.y = 0
+
+window.addEventListener('mousemove', (event) =>
+{
+    cursor.x = event.clientX / sizes.width - 0.5
+    cursor.y = event.clientY / sizes.height - 0.5
+})
 
 /**
  * Renderer
@@ -104,21 +124,22 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
  * Animate
  */
 const clock = new THREE.Clock()
+let previousTime = 0
+
 
 const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
-
+    const deltaTime = elapsedTime - previousTime
+    previousTime = elapsedTime
     //Update particles
-    for(let i = 0; i < count; i++)
-    {
-        let i3 = i * 3
 
-        const x = particlesGeometry.attributes.position.array[i3]
-        particlesGeometry.attributes.position.array[i3 + 1] = Math.sin(elapsedTime + x)
-    }
-    particlesGeometry.attributes.position.needsUpdate = true
-
+    // Animate camera
+    const parallaxX = cursor.x * 0.5
+    const parallaxY = - cursor.y * 0.5
+    cameraGroup.position.x += (parallaxX - cameraGroup.position.x) * 5 * deltaTime
+    cameraGroup.position.y += (parallaxY - cameraGroup.position.y) * 5 * deltaTime
+    
     // Update controls
     controls.update()
 
