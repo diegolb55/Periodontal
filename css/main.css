@@ -9,8 +9,9 @@ body {
 }
 /* holds company logo and name */
 header {
+  border: 2px solid grey;
   height: 50px;
-  width: 60%;
+  width: 20rem;
   color: lightblue;
 
   display: flex;
@@ -138,7 +139,7 @@ section {
     margin-right: 100px;
   }
 
-  /* SECTION FOUR */
+  /* SECTION THREE */
   .horario-box {
     padding: 20px;
     margin-right: 50px;

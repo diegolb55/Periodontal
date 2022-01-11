@@ -1,6 +1,6 @@
 .topnav {
     /* overflow: hidden; */
-    
+    border: 2px solid black;
     position: absolute;
     top: 0;
     right: 100px;
@@ -38,7 +38,7 @@
     margin-right: 50px;
   }
   
-  @media screen and (max-width: 730px) {
+  @media screen and (max-width: 790px) {
       .topnav {
         height: 50px;
         width: 50px;
@@ -51,7 +51,7 @@
       }
   }
   
-  @media screen and (max-width: 730px) {
+  @media screen and (max-width: 790px) {
     .topnav.responsive {
         background-color: lightblue;
         position: fixed;

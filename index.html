@@ -16,45 +16,46 @@
 </head>
 <body>
     <div class="page-wrapper">
-        <header>
-            <div class="logo"></div>
-            <h4 id="company-name">Periodontal & Oral Health</h4>
-        </header>
-        <div class="topnav" id="myTopnav">
-            <a href="#home">Home</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
-            <div href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-            </div>
+      <canvas></canvas>
+      <header>
+        <div class="logo"></div>
+        <h4 id="company-name">Periodontal & Oral Health</h4>
+      </header>
+      <div class="topnav" id="myTopnav">
+        <a href="#home">Home</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <div href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
         </div>
+      </div>
         
-        <section class="section-one">
+      <section class="section-one">
 
-          <div class="slideshow-container">
-            <div class="mySlides fade">
-              <img src="images/1.jpg" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-              <img src="images/4.jpg" style="width:100%">
-            </div>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="images/1.jpg" style="width:100%">
+          </div>
+          <div class="mySlides fade">
+            <img src="images/4.jpg" style="width:100%">
+          </div>
             
-            <div class="mySlides fade">
-              <img src="images/3.jpg" style="width:100%">
-            </div>
-            <br>
-            <div style="text-align:center">
-              <span class="dot"></span> 
-              <span class="dot"></span> 
-              <span class="dot"></span> 
-            </div> 
+          <div class="mySlides fade">
+            <img src="images/3.jpg" style="width:100%">
           </div>
+          <br>
+          <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div> 
+        </div>
 
-          <div class="info-btn">
-            <h3>Obten la sonrisa<br> que siempre has <br>querido.</h3>
-            <button class="contact-btn">Contactanos</button>
-          </div>
+        <div class="info-btn">
+          <h3>Obten la sonrisa<br> que siempre has <br>querido.</h3>
+          <button class="contact-btn">Contactanos</button>
+        </div>
 
         </section>
         
@@ -88,19 +89,27 @@
           <h3>Periodontal & Oral Health's Approach</h4>
           <div class="icons">
             <div class="ibox">
-              <div class="icon-container"></div>
+              <div class="icon-container">
+                <img src="images/house.png" alt="house icon">
+              </div>
               <h4>Facilidades <br>modernas</h4>
             </div>
             <div class="ibox">
-              <div class="icon-container"></div>
+              <div class="icon-container">
+                <img src="images/heart.png" alt="house icon">
+              </div>
               <h4>Equipo cálido <br>y acogedor</h4>
             </div>
             <div class="ibox">
-              <div class="icon-container"></div>
+              <div class="icon-container">
+                <img src="images/person.png" alt="house icon">
+              </div>
               <h4>Tratamientos <br>personalizados</h4>
             </div>
             <div class="ibox">
-              <div class="icon-container"></div>
+              <div class="icon-container">
+                <img src="images/chair.png" alt="house icon">
+              </div>
               <h4>Ambiente <br>relajado</h4>
             </div>
           </div>
@@ -114,5 +123,7 @@
 
     <script src="scripts/topnav.js"></script>
     <script src="scripts/slideshow.js"></script>
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script></script>
 </body>
 </html>

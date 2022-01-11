@@ -33,7 +33,12 @@
     height: 5rem;
     width: 5rem;
     margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .ibox h4 {
     text-align: center;
 }
