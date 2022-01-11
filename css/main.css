@@ -61,7 +61,7 @@ section {
 
 
 /* section's responsiveness */
-@media screen and (min-width: 400px){
+@media screen and (min-width: 320px){
   /* SECTION ONE */
  
   .info-btn {
