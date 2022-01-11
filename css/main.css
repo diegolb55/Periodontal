@@ -7,9 +7,17 @@
 body {
   color: lightblue;
 }
+/* WEBGL, THREE.JS */
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+  z-index: -1;
+}
+
 /* holds company logo and name */
 header {
-  border: 2px solid grey;
   height: 50px;
   width: 20rem;
   color: lightblue;
@@ -71,6 +79,10 @@ section {
   header {
     left: 0;
   }
+  .slideshow-container {
+    margin-top: 50px;
+  }
+
 
   /* SECTION ONE */
   .info-btn {
@@ -123,6 +135,9 @@ section {
   /* header */
   header {
     left: 50px;
+  }
+  .slideshow-container {
+    margin-top: 50px;
   }
 
   /* SECTION ONE */
