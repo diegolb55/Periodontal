@@ -13,7 +13,7 @@ const scene = new THREE.Scene()
  * Textures
  */
 const textureLoader = new THREE.TextureLoader()
-const particleTexture = textureLoader.load('/images/particle.png')
+const particleTexture = textureLoader.load('images/particle.png')
 
 /**
  * Particles
