@@ -13,11 +13,11 @@
 #decor::after{
   content:'';
   display: block;
-  background: lightblue;
+  background: rgb(208, 228, 235);
   height: 100px;
   width: 258px;
-  opacity: .5;
   position: absolute;
+  z-index: -1;
   top: -30%;
   right: 0;
 }

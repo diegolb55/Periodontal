@@ -15,48 +15,6 @@ const scene = new THREE.Scene()
 const textureLoader = new THREE.TextureLoader()
 const particleTexture = textureLoader.load('images/particle.png')
 
-/**
- * Particles
- */
-// Geometry
-const particlesGeometry = new THREE.BufferGeometry()
-const count = 600
-
-const positions = new Float32Array(count * 3)
-const colors = new Float32Array(count * 3)
-
-for(let i = 0; i < count * 3; i++)
-{
-    positions[i] = (Math.random() - 0.5) * 10
-    // colors[i] = Math.random()
-    colors[i*3] = 0
-    colors[i*3 + 1] = 1
-    colors[i*3 + 2] = 1
-
-}
-
-particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
-particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
-
-// Material
-const particlesMaterial = new THREE.PointsMaterial()
-
-particlesMaterial.size = 0.2
-particlesMaterial.sizeAttenuation = true
-
-// particlesMaterial.color = new THREE.Color('#ff88cc')
-
-particlesMaterial.transparent = true
-particlesMaterial.alphaMap = particleTexture
-// particlesMaterial.alphaTest = 0.01
-// particlesMaterial.depthTest = false
-particlesMaterial.depthWrite = false
-particlesMaterial.blending = THREE.AdditiveBlending
-particlesMaterial.vertexColors = true
-
-// Points
-const particles = new THREE.Points(particlesGeometry, particlesMaterial)
-scene.add(particles)
 
 /**
  * Sizes
@@ -129,16 +87,10 @@ let previousTime = 0
 
 const tick = () =>
 {
-    const elapsedTime = clock.getElapsedTime()
-    const deltaTime = elapsedTime - previousTime
-    previousTime = elapsedTime
-    //Update particles
+    
 
     // Animate camera
-    const parallaxX = cursor.x * 0.5
-    const parallaxY = - cursor.y * 0.5
-    cameraGroup.position.x += (parallaxX - cameraGroup.position.x) * 5 * deltaTime
-    cameraGroup.position.y += (parallaxY - cameraGroup.position.y) * 5 * deltaTime
+    
     
     // Update controls
     controls.update()
