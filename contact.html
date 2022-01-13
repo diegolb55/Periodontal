@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/topnav.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <div class="logo"></div>
+            <h4 id="company-name">Periodontal & Oral Health</h4>
+          </header>
+          <div class="topnav" id="myTopnav">
+            <a href="#home">Home</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#about">About</a>
+            <a href="contact.html">Contact</a>
+            <div href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </div>
+          </div>
+        <div class="form-container">
+            <form >
+                <div class="form-box">
+                    <h3>Contact Us</h3>
+                </div>
+                <div class="form-box">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+                <div class="form-box">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+                <div class="form-box">
+                    <label for="service">Service</label>
+                    <select id="service" name="service">
+                        <option value="limpieza">Limpieza</option>
+                        <option value="visita">Visita</option>
+                        <option value="rootcanal">Rootcanal</option>
+                    </select>
+                </div>
+                <div class="form-box">
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                </div>
+
+                <div class="form-box">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

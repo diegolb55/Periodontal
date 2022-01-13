@@ -1,0 +1,67 @@
+/* FORM STYLING PAGE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+.form-container {
+    background: lightblue;
+    height: 100vh;
+
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    background: white;
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: -3px 6px 10px 3px rgb(138, 198, 218);
+
+
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: .5fr 1fr 1fr 1fr 1fr 1fr; 
+    gap: 20px 0px; 
+    grid-template-areas: 
+        "."
+        "."
+        "."
+        "."
+        "."
+        "."; 
+    width: 70%; 
+    max-width: 500px;
+    height: 80vh;
+    
+}
+.form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input, select {
+    padding: 20px;
+    width: 70%;
+    border-radius: 15px;
+    box-shadow: -3px 6px 10px 3px #dfdfdf;
+}
+select {
+    width: 40%;
+}
+textarea {
+    height: 50px;
+    resize: none;
+    border: 2px solid grey;
+}
+
+.form-box:nth-child(6) > input {
+    background: lightblue;
+    color: white;
+    box-shadow: -3px 6px 10px 3px rgb(201, 219, 224);
+
+}
