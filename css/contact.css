@@ -48,6 +48,7 @@ form {
 }
 /* styling inputs */
 input, select {
+    -webkit-appearance: none;
     padding: 20px;
     width: 70%;
     border-radius: 15px;
