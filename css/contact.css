@@ -51,6 +51,7 @@ input, select {
     padding: 20px;
     width: 70%;
     border-radius: 15px;
+    -webkit-appearance: none;
     -webkit-box-shadow: -3px 6px 10px 3px #dfdfdf;
     box-shadow: -3px 6px 10px 3px #dfdfdf;
 }
