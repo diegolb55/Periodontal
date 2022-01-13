@@ -5,6 +5,7 @@
     box-sizing: border-box;
     border: none;
 }
+/* holds the form */
 .form-container {
     background: lightblue;
     height: 100vh;
@@ -15,6 +16,7 @@
     justify-content: center;
     align-items: center;
 }
+/* the actual form */
 form {
     background: white;
     padding: 20px;
@@ -38,12 +40,13 @@ form {
     height: 80vh;
     
 }
+/* hold each form element */
 .form-box {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+/* styling inputs */
 input, select {
     padding: 20px;
     width: 70%;
@@ -53,12 +56,21 @@ input, select {
 select {
     width: 40%;
 }
-textarea {
-    height: 50px;
-    resize: none;
-    border: 2px solid grey;
+/* select label */
+.form-box:nth-child(4) > label {
+    /* border: 2px solid red; */
+    padding-right: 20px;
 }
 
+/* styles the writing box */
+textarea {
+    border: 2px solid lightblue;
+    padding: 10px;
+    min-height: 100px;
+    width: 100%;
+    resize: none;
+}
+/* button */
 .form-box:nth-child(6) > input {
     background: lightblue;
     color: white;
