@@ -31,11 +31,12 @@ header {
   left: 50px;
 }
 /* Company logo and name*/
+
 .logo {
-  background: lightblue;
-  height: 30px;
-  width: 30px;
-  border-radius: 100%;
+  /* border: 2px solid red; */
+  display: block;
+  width: 2.5rem;
+  
 }
 #company-name {
   margin-left: 20px;

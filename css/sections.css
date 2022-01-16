@@ -180,7 +180,7 @@ img {
 
 /* SECTION CONTROL */
 section {
-
+    /* border: 2px dotted black; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,10 +192,11 @@ section {
     min-height: 100vh;
   }
   .section-two {
-    min-height: 100vh;
+    min-height: 70vh;
   }
   .section-three {
-    min-height: 100vh;
+    min-height: 70vh;
+    padding: 50px 0;
   }
   
   .socials {
@@ -215,7 +216,7 @@ section {
 
     .info-btn {
       /* border: 2px solid red; */
-      font-size: 3rem;
+      font-size: 2.8rem;
       margin: 50px 0;
     }
   
@@ -235,7 +236,9 @@ section {
     }
   
     /* SECTION THREE */
-   
+   .section-three {
+     margin: 50px 0;
+   }
     .horario-box h4 {
       font-size: 2rem;
     }
