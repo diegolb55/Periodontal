@@ -1,0 +1,148 @@
+/* Styling for services page */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.services {
+    /* border: 2px solid #000000; */
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flip-card {
+  /* border: 2px solid black; */
+  background-color: transparent;
+  width: 30rem;
+  height: 30rem;
+  perspective: 1000px;
+  margin: 20px auto;
+}
+
+.flip-card-inner {
+  /* border: 2px solid yellow; */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 10px 10px 5px 0px rgba(173,216,230,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(173,216,230,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(173,216,230,0.75);
+}
+
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background: lightblue;
+  color: white;
+  padding: 5px;
+}
+
+.flip-card-front h3 {
+  color: lightblue;
+  background: white;
+  padding: 10px;
+  font-size: 2.3rem;
+
+}
+.service-box {
+  border: 2px solid white;
+  padding: 30px 0;
+  margin: 20px auto;
+  width: 80%;
+  font-size: 1.5rem;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card-back p {
+  font-size: 1.5rem;
+}
+
+
+.fliping {
+  transform: rotateY(180deg);
+}
+
+/* ART ANIMATION STYLING */
+.art-box {
+  background: lightblue;
+  border-radius: 100%;
+  margin: 50px auto 0 auto;
+  height: 350px;
+  width: 350px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+#s {
+  background: rgb(221, 146, 118);
+  border-top: 20px solid rgb(238, 176, 153);
+  height: 120px;
+  width: 400px;
+
+  position: absolute;
+  bottom: 0;
+}
+.c {
+  background: rgb(253, 242, 242);
+  position: absolute;
+  z-index: 2;
+  bottom: 80px
+
+}
+#c-one {
+  border-radius: 49% 47% 30% 34% / 52% 49% 37% 34% ;
+  height: 135px;
+  width: 130px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sq {
+  background: rgb(253, 242, 242);
+  height: 93px;
+  width: 90px;
+  transform: rotate(35deg);
+  border-radius: 20px;
+  /* border: 2px solid black; */
+  position: relative;
+  top: -30px;
+  left: -5px;
+  
+}
+#c-two {
+  border-radius: 49% 47% 30% 34% / 52% 49% 37% 34% ;
+  height: 100px;
+  width: 100px;
+
+  right: 0;
+   
+ }
+ #c-three {
+  border-radius: 49% 47% 30% 34% / 52% 49% 37% 34% ;
+  height: 100px;
+  width: 100px;
+
+  left: 0;
+   
+ }
