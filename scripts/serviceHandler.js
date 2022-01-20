@@ -3,7 +3,7 @@ const flipcontent = {
     'card-one': {
         'Coronas': {
             'heading': 'coronas',
-            'text': 'aaaaaaaaaaaaaaaaaaaaaaa <br> aaaaaaaaaaaaaaaaaaaaa',
+            'text': 'text para coronas',
             'img': [false, ''],
             'video': [false, '']
     
@@ -107,7 +107,6 @@ $(document).ready(function(){
 
         // shadow to the right
         card.children().css({
-            "background": "blue",
             "box-shadow" : "-10px 10px 5px 0px rgba(173,216,230,0.75)",
             "-webkit-box-shadow": "-10px 10px 5px 0px rgba(173,216,230,0.75)",
             "-moz-box-shadow": "-10px 10px 5px 0px rgba(173,216,230,0.75)"
@@ -119,7 +118,6 @@ $(document).ready(function(){
             card.children().removeClass('fliping');
             // shadow to the left
             card.children().css({
-                "background": "blue",
                 "box-shadow" : "10px 10px 5px 0px rgba(173,216,230,0.75)",
                 "-webkit-box-shadow": "10px 10px 5px 0px rgba(173,216,230,0.75)",
                 "-moz-box-shadow": "10px 10px 5px 0px rgba(173,216,230,0.75)"
