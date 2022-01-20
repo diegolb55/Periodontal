@@ -74,12 +74,12 @@ const flipcontent = {
 // takes in a card and service. Looks for
 // the keys: heading and text value in db, then changes
 // the values in html to those db values
+
 function traceInfo(card, idcard, service){
     // captures info from db
     var heading = flipcontent[idcard][service]['heading']
     var text = flipcontent[idcard][service]['text']
-    console.log(heading)
-    console.log(text)
+    
     // selects back part of inner card
     var back = $(card).children().children('.flip-card-back')
     back.children('h3').html(heading)
@@ -87,18 +87,20 @@ function traceInfo(card, idcard, service){
 
 
 }
+/**
+ *  JQueary
+ */
+var currService, card, idcard, exit
+
 $(document).ready(function(){
 
     $(".service-box").click(function() {
         // text inside the sub boxes
-        var currService = $(this).children('p').html()
-        console.log('currService:' + currService)
+        currService = $(this).children('p').html()
         // the whole card
-        var card = $(this).parent().parent().parent()
-        console.log('card:' + card)
+        card = $(this).parent().parent().parent()
         // the card's id e.g card-two
-        var idcard = card.attr('id')
-        console.log('idcard: ' + idcard)
+        idcard = card.attr('id')
 
         traceInfo(card, idcard, currService)
 
@@ -112,7 +114,7 @@ $(document).ready(function(){
             "-moz-box-shadow": "-10px 10px 5px 0px rgba(173,216,230,0.75)"
         });
 
-        var exit = $(card).children().children(".flip-card-back").children('h1');
+        exit = $(card).children().children(".flip-card-back").children('h1');
         exit.click(function() {
             // unflips on back
             card.children().removeClass('fliping');
@@ -132,10 +134,14 @@ $(document).ready(function(){
         // to gerate a randome rounded number between 1 to 10;
         var x = Math.floor(Math.random() * 100) + 1;
         var y = Math.floor(Math.random() * 50) + 1;
+        var s = Math.floor(Math.random() * 5) + 5;
+
         $(this).css({
             "top": y,
             "left": x,
-            
+            "height": s,
+            "width": s,
+
         });
     });
 

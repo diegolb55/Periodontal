@@ -19,16 +19,23 @@ body {
 
 /* holds company logo and name */
 header {
+  /* border: 2px solid gold; */
+
   height: 50px;
   width: 20rem;
   color: lightblue;
 
-  display: flex;
-  align-items: center;
-
   position: absolute;
   top: 0;
   left: 50px;
+}
+header a {
+  display: block;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
 }
 /* Company logo and name*/
 
