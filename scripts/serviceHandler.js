@@ -125,5 +125,18 @@ $(document).ready(function(){
         });
 
     });
+    
+    // loops through the dots spans and gives them a position
+    $('.dots').children('span').each(function () {
+       
+        // to gerate a randome rounded number between 1 to 10;
+        var x = Math.floor(Math.random() * 100) + 1;
+        var y = Math.floor(Math.random() * 50) + 1;
+        $(this).css({
+            "top": y,
+            "left": x,
+            
+        });
+    });
 
 });
