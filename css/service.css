@@ -1,9 +1,10 @@
 /* Styling for services page */
+/* colors: 
+  #72c491 light
+  #435357 dark
+ */
 
-* {
-    margin: 0;
-    padding: 0;
-}
+
 body {
   min-height: 150vh;
 }
@@ -47,13 +48,13 @@ body {
 }
 
 .flip-card-front {
-  background: lightblue;
+  background: #72c491;
   color: white;
   padding: 5px;
 }
 
 .flip-card-front h3 {
-  color: lightblue;
+  color: #72c491;
   background: white;
   padding: 10px;
   font-size: 2.3rem;
@@ -74,7 +75,7 @@ body {
 }
 
 .flip-card-back {
-  background-color: #2980b9;
+  background-color: #435357;
   color: white;
   transform: rotateY(180deg);
 }
@@ -89,7 +90,7 @@ body {
 
 /* ART ANIMATION STYLING */
 .art-box {
-  background: lightblue;
+  background: #435357;
   border-radius: 100%;
   margin: 50px auto 0 auto;
   height: 350px;

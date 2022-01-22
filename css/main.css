@@ -1,12 +1,14 @@
-
+/* colors: 
+  #72c491 light
+  #435357 dark
+ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none
 }
-body {
-  color: lightblue;
-}
+
 /* WEBGL, THREE.JS */
 .webgl {
   position: fixed;
@@ -22,8 +24,7 @@ header {
   /* border: 2px solid gold; */
 
   height: 50px;
-  width: 20rem;
-  color: lightblue;
+  color: #435357;
 
   position: absolute;
   top: 0;
@@ -55,11 +56,17 @@ header a {
   header {
     left: 20px;
   }
+  #company-name {
+    font-size: 1.2rem;
+  }
 }
 @media screen and (min-width: 800px){
   /* header */
   header {
     left: 50px;
+  }
+  #company-name {
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1230px){

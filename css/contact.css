@@ -1,13 +1,12 @@
 /* FORM STYLING PAGE */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-}
+/* colors: 
+  #72c491 light
+  #435357 dark
+ */
+
 /* holds the form */
 .form-container {
-    background: lightblue;
+    background: #72c491;
     min-height: 100vh;
 
     margin-top: 50px;
@@ -21,7 +20,7 @@ form {
     background: white;
     padding: 20px;
     margin: 0 auto;
-    box-shadow: -3px 6px 10px 3px rgb(138, 198, 218);
+    box-shadow: -3px 6px 10px 3px #36a360;
 
 
     display: grid; 
@@ -66,7 +65,7 @@ select {
 
 /* styles the writing box */
 textarea {
-    border: 2px solid lightblue;
+    border: 2px solid #72c491;
     padding: 10px;
     min-height: 100px;
     width: 100%;
@@ -74,8 +73,8 @@ textarea {
 }
 /* button */
 .form-box:nth-child(6) > input {
-    background: lightblue;
+    background: #435357;
     color: white;
-    box-shadow: -3px 6px 10px 3px rgb(201, 219, 224);
+    box-shadow: -3px 6px 10px 3px #94a6aa;
 
 }

@@ -15,14 +15,14 @@ img {
   height: 8px;
   width: 8px;
   margin: 0 2px;
-  background-color: lightblue;
+  background-color: #435357;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active {
-  background-color: rgb(154, 87, 218);
+  background-color: #72c491;
 }
 
 /* Fading animation */
@@ -46,13 +46,13 @@ img {
 
 /* INFO AND BUTTON BOX */
 .info-btn {
-  color: lightblue;
+  color: #435357;
   margin-bottom: 50px;
 }
 
 .contact-btn {
   border-style: none;
-  background: rgb(148, 154, 236);
+  background: #72c491;
   color: white;
   margin: 10px 0;
   padding: 10px 20px;
@@ -63,7 +63,7 @@ img {
 
 /* INFO BOX STYLING */
 .info-box {
-    color: lightblue;
+    color: #435357;
 }
 .info-box h3 {
     line-height: .8;
@@ -74,7 +74,7 @@ img {
 #decor::after{
     content:'';
     display: block;
-    background: rgb(208, 228, 235);
+    background: #72c491;
     height: 100px;
     width: 258px;
     position: absolute;
@@ -94,7 +94,7 @@ img {
 .img-container::after {
     content:'';
     display: block;
-    background: rgb(194, 221, 229);
+    background: #72c491;
     height: 100px;
     width: 400px;
     position: absolute;
@@ -111,7 +111,7 @@ img {
 
 /* HORARIO BOX STYLING */
 .horario-box {
-    color: lightblue; 
+    color: #435357; 
     display: grid;
     grid-template-columns: auto auto;
     justify-content: center;
@@ -122,8 +122,9 @@ img {
     text-align: center;
 }
 .horario-box p {
-    line-height: 2.5rem;
-    padding: 20px;
+  color: #72c491;
+  line-height: 2.5rem;
+  padding: 20px;
     
 }
 .section-three img {
@@ -144,7 +145,7 @@ img {
 .section-four h3::after {
     content: '';
     display: block;
-    background: lightblue;
+    background: #435357;
     height: 30px;
     width: 2px;
     margin: 20px auto;
@@ -160,7 +161,7 @@ img {
 /* styling on main */
 
 .icon-container {
-    border: 3px solid lightblue;
+    border: 3px solid #435357;
     border-radius: 100%;
     height: 5rem;
     width: 5rem;
@@ -200,7 +201,7 @@ section {
   }
   
   .socials {
-    background: lightblue;
+    background: #72c491;
     height: 300px;
     margin-top: 50px;
   

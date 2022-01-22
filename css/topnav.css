@@ -13,7 +13,7 @@
   .topnav a {
     float: left;
     display: block;
-    color: lightblue;
+    color: #435357;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -32,7 +32,7 @@
    */
   .topnav .icon {
     display: none;
-    color: rgb(54, 163, 199);
+    color: #435357;
     transform: scale(1.5);
     /* margin: 15px 50px; */
     margin-top: 15px;
@@ -54,7 +54,7 @@
   
   @media screen and (max-width: 790px) {
     .topnav.responsive {
-        background-color: lightblue;
+        background-color: #72c491;
         position: fixed;
 
         height: 100%;
