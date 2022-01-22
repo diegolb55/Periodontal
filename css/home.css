@@ -79,6 +79,9 @@ img {
 /* SECTION TWO STYLING */
 
 /* INFO BOX STYLING */
+.section-two {
+  position: relative;
+}
 .info-box {
     color: #435357;
 }
@@ -109,19 +112,18 @@ img {
 .img-container {
     position: relative;
 }
-.img-container::after {
-    content:'';
-    display: block;
-    background: #72c491;
-    height: 100px;
-    width: 400px;
-    position: absolute;
-    bottom: -20%;
-    right: -10%;
-
+#decor2 {
+  background: #72c491;
+  height: 100px;
+  width: 300px;
+  position: relative;
+  top: -2rem;
+  right: -15rem;
 }
+
 .section-two img {
     display: block;
+    
 }
 
 
@@ -129,40 +131,39 @@ img {
 
 /* SECTION FOUR STYLING */
 
-.section-four {
-    display: grid;
-    grid-template-rows: auto auto;
-}
 .section-four h3 {
-    text-align: center;
-    position: relative;
-    color: #435357;
+  text-align: center;
+  position: relative;
+  color: #435357;
     
 }
 /* decor line of h3 */
 .section-four h3::after {
-    content: '';
-    display: block;
-    background: #435357;
-    height: 30px;
-    width: 2px;
-    margin: 20px auto;
+  content: '';
+  display: block;
+  background: #435357;
+  height: 30px;
+  width: 2px;
+  margin: 20px auto;
 
 }
 /* Holds all the iboxes inside */
 .icons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 /*Iboxes Holds an icon-container and h4 */
 /* styling on main */
+
 
 .icon-container {
     border: 3px solid #435357;
     border-radius: 100%;
     height: 5rem;
     width: 5rem;
+
+    margin: 0 auto;
 
     display: flex;
     justify-content: center;
@@ -171,8 +172,9 @@ img {
 
 
 .ibox h4 {
-    text-align: center;
-    color: #435357;
+  margin: 0 auto;
+  text-align: center;
+  color: #435357;
 }
 
 
@@ -194,7 +196,13 @@ img {
   .section-two {
     min-height: 70vh;
     margin-bottom: 50px;
+    overflow: hidden;
+
   }
+  .section-four {
+    display: grid;
+    grid-template-rows: auto auto;
+}
  
   
   .socials {
