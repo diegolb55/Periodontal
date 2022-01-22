@@ -1,0 +1,94 @@
+/* STYLING FOR FEATURES ON MULTIPLE PAGES */
+/* 
+    1.) .horario-map-section
+    2.) .big-logo-section
+*/
+
+
+/* HORARIO-MAP-SECTION*/
+
+.horario-map-section {
+    min-height: 70vh;
+    padding: 50px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  
+    overflow: hidden;
+}
+.horario-box {
+    color: #435357; 
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+.horario-box h4 {
+    text-decoration: underline 2px;
+    grid-column: 1 / 3;
+    text-align: center;
+}
+.horario-box p {
+  color: #72c491;
+  line-height: 2.5rem;
+  padding: 20px;
+    
+}
+.horario-map-section img {
+  display: block;
+}
+ 
+/* big-logo-section */
+.big-logo-section {
+    /* border: 2px solid red; */
+    padding: 50px 0;
+}
+.big-logo-section img {
+    display: block;
+    margin: 0 auto;
+    width: 20rem;
+}
+@media screen and (min-width: 320px){
+    .horario-map-section {
+        margin: 50px 0;
+    }
+    .horario-box h4 {
+        font-size: 2rem;
+    }
+    .horario-box p{
+        font-size: 1.5rem;
+    }
+    .horario-map-section img {
+        width: 20rem;
+    }
+}
+ 
+@media screen and (min-width: 820px){
+  /* SECTION THREE */
+  .horario-box {
+    padding: 20px;
+    margin-right: 50px;
+  }
+  .horario-box h4 {
+    font-size: 3rem;
+  }
+  .horario-box p{
+    font-size: 2rem;
+  }
+  .horario-map-section img {
+    margin-left: 50px;
+  }    
+}
+@media screen and (min-width: 1230px){
+    /* SECTION THREE */
+    .info-box h3 {
+        font-size: 3.3rem;
+    }
+    .info-box p {
+    font-size: 2.3rem;
+    }
+    .horario-map-section img {
+    width: 25rem;
+    }
+  }
