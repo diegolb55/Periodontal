@@ -19,7 +19,7 @@ body {
 .flip-card {
   /* border: 2px solid black; */
   background: white;
-  height: 30rem;
+  height: 33rem;
   perspective: 1000px;
   margin: 20px auto;
 
@@ -60,22 +60,59 @@ body {
   font-size: 2.3rem;
 
 }
+
+.flip-card-front a {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
 .service-box {
   /* border: 2px solid white; */
 
-  border-top: 2px solid white;
-  border-left: 2px solid white;
-  border-bottom: 2px solid #435357;
-  border-right: 2px solid #435357;
-
-  padding: 30px 0;
   margin: 20px auto;
   width: 80%;
+  
+}
+
+.button {
+  display: inline-flex;
+  
+  padding: 30px 0;
+  width: 80%;
+  border: 2px solid #435357;
+  color: white;
+  text-decoration: none;
   font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
 
   position: relative;
-  
-  transition: transform .3s;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+
+#translate {
+  transform: rotate(50deg);
+  width: 100%;
+  height: 150%;
+  left: -250px;
+  /* top: -30px; */
+  background: #435357;
+  position: absolute;
+  transition: all .3s ease-Out;
+}
+
+.button:hover #translate {
+  left: -0px;
+}
+.button p {
+  position: relative;
+}
+.button:hover p {
+  color: #72c491;
 }
 
 
