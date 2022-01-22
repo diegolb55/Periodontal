@@ -90,9 +90,9 @@ function traceInfo(card, idcard, service){
 /**
  *  JQueary
  */
-var currService, card, idcard, exit
-
 $(document).ready(function(){
+
+    let currService, card, idcard, exit
 
     $(".service-box").click(function() {
         // text inside the sub boxes
@@ -113,19 +113,18 @@ $(document).ready(function(){
             "-webkit-box-shadow": "-10px 10px 5px 0px rgba(173,216,230,0.75)",
             "-moz-box-shadow": "-10px 10px 5px 0px rgba(173,216,230,0.75)"
         });
+    });
 
-        exit = $(card).children().children(".flip-card-back").children('h1');
-        exit.click(function() {
-            // unflips on back
-            card.children().removeClass('fliping');
-            // shadow to the left
-            card.children().css({
-                "box-shadow" : "10px 10px 5px 0px rgba(173,216,230,0.75)",
-                "-webkit-box-shadow": "10px 10px 5px 0px rgba(173,216,230,0.75)",
-                "-moz-box-shadow": "10px 10px 5px 0px rgba(173,216,230,0.75)"
-            });
+    // handles unflip
+    $(".flip-card-back").children('h1').click().click(function() {
+        // unflips on back
+        $(this).parent().parent().removeClass('fliping');
+        // shadow to the left
+        card.children().css({
+            "box-shadow" : "10px 10px 5px 0px rgba(173,216,230,0.75)",
+            "-webkit-box-shadow": "10px 10px 5px 0px rgba(173,216,230,0.75)",
+            "-moz-box-shadow": "10px 10px 5px 0px rgba(173,216,230,0.75)"
         });
-
     });
     
     // loops through the dots spans and gives them a position
