@@ -1,4 +1,8 @@
 /* Home page sections styling */
+/* colors: 
+  #72c491 light
+  #435357 dark
+ */
 
 /* SECTION ONE STYLING */
 
@@ -49,8 +53,21 @@ img {
   color: #435357;
   margin-bottom: 50px;
 }
+.info-btn div {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+}
+/* o llamanos al... */
+.info-btn div p{
+  color: #72c491;
+  margin-left: 10px;
+  font-size: 1.2rem;
 
+  
+}
 .contact-btn {
+  font-size: 1.4rem;
   border-style: none;
   background: #72c491;
   color: white;
@@ -85,6 +102,7 @@ img {
 
 .info-box p {
     text-align: center;
+    color: #72c491;
 }
 
 /* image holder */
@@ -140,6 +158,8 @@ img {
 .section-four h3 {
     text-align: center;
     position: relative;
+    color: #435357;
+    
 }
 /* decor line of h3 */
 .section-four h3::after {
@@ -175,6 +195,7 @@ img {
 
 .ibox h4 {
     text-align: center;
+    color: #435357;
 }
 
 
