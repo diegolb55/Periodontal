@@ -11,9 +11,9 @@
 
     margin-top: 50px;
 
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 /* the actual form */
 form {
@@ -35,9 +35,10 @@ form {
         "."
         "."
         "."; 
-    width: 70%; 
+    width: 80%;
+    
     max-width: 500px;
-    height: 80vh;
+    
     
 }
 /* hold each form element */

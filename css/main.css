@@ -23,48 +23,47 @@
 /* holds company logo and name */
 header {
   /* border: 2px solid gold; */
-
   height: 50px;
-  color: #435357;
-
-  position: absolute;
-  top: 0;
-  left: 50px;
+  color: #435357; 
+  
+  display: flex;
+  position: relative;
 }
 header a {
+  /* border: 2px solid blue; */
   display: block;
   color: inherit;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
 
+  display: flex;
+  text-decoration: none;
+  
 }
 /* Company logo and name*/
 
 .logo {
   /* border: 2px solid red; */
   display: block;
-  width: 2.5rem;
   
 }
 #company-name {
-  margin-left: 20px;
-  font-size: 1.2rem;
+  /* border: 2px solid green; */
+  align-self: center;
 }
 
 @media screen and (min-width: 320px){
   /* header */
   header {
-    left: 20px;
+    top: 20px;
   }
   #company-name {
     font-size: 1.2rem;
+    margin-left: 20px;
   }
 }
-@media screen and (min-width: 800px){
+@media screen and (min-width: 790px){
   /* header */
-  header {
-    left: 50px;
+  header a {
+    margin-left: 20px;
   }
   #company-name {
     font-size: 1.5rem;
@@ -73,7 +72,8 @@ header a {
 @media screen and (min-width: 1230px){
   /* header */
   header {
-    left: 150px;
+    width: 80vw;
+    margin: 0 auto;
   }
   
 }
