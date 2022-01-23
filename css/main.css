@@ -41,7 +41,7 @@ header a {
 /* Company logo and name*/
 
 .logo {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   display: block;
   object-fit: contain;
   width: 5rem;

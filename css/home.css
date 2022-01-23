@@ -181,7 +181,7 @@ img {
 
 /* SECTION CONTROL */
 .section-one, .section-two  {
-  border: 2px dotted red;
+  /* border: 2px dotted red; */
 
   display: flex;
   justify-content: center;
