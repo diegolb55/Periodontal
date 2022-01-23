@@ -10,10 +10,10 @@ body {
 }
 
 .services {
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .flip-card {
@@ -116,8 +116,6 @@ body {
 }
 
 
-
-
 .flip-card-back {
   background-color: #435357;
   color: white;
@@ -136,16 +134,17 @@ body {
 .art-box {
   background: #435357;
   border-radius: 100%;
-  margin: 50px auto 0 auto;
+  
   height: 350px;
   width: 350px;
-  overflow: hidden;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   position: relative;
+  overflow: hidden;
+
 }
 #s {
   background: rgb(221, 146, 118);
@@ -278,6 +277,9 @@ left: 0;
 @media screen and (min-width: 300px){
   .flip-card {
     width: 20rem;
+  }
+  .art-box {
+    margin: 50px auto;
   }
 }
 @media screen and (min-width: 600px){
