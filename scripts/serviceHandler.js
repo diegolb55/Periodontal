@@ -116,7 +116,7 @@ $(document).ready(function(){
     });
 
     // handles unflip
-    $(".flip-card-back").children('h1').click().click(function() {
+    $(".flip-card-back").children('i').click().click(function() {
         // unflips on back
         $(this).parent().parent().removeClass('fliping');
         // shadow to the left

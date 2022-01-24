@@ -148,6 +148,16 @@ body {
   transform: rotateY(180deg);
 }
 
+#back {
+  /* border: 3px solid red; */
+  display: inline;
+  font-size: 2rem;
+  
+  position: absolute;
+  left: 10px;
+  top: 10px
+}
+
 /* ART box*/
 .art-box {
   background: #435357;
@@ -300,7 +310,7 @@ left: 0;
     margin: 50px auto;
   }
   .service-title-container {
-    width: 80%;
+    width: 70%;
     margin: 20px auto;
   }
 }
