@@ -1,4 +1,10 @@
 /* Styling for services page */
+/*
+    1.) .service-title-container
+    2.) .art box
+    3.) .services
+*/
+
 /* colors: 
   #72c491 light
   #435357 dark
@@ -9,6 +15,24 @@ body {
   min-height: 150vh;
 }
 
+
+
+
+.service-title-container {
+  border: 2px solid #72c491;
+}
+.service-title-container h3 {
+  color: #72c491;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2.3rem;
+
+}
+
+
+
+
+/* .services */
 .services {
   /* border: 2px solid red; */
   display: flex;
@@ -67,19 +91,12 @@ body {
   width: 80%;
 }
 .service-box {
-  /* border: 2px solid white; */
-
   margin: 20px auto;
-  width: 80%;
-  
-}
-
-.button {
   display: inline-flex;
   
   padding: 30px 0;
   width: 80%;
-  border: 2px solid #435357;
+  border: 2px solid white;
   color: white;
   text-decoration: none;
   font-size: 1.5rem;
@@ -90,6 +107,7 @@ body {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  
 }
 
 
@@ -105,13 +123,13 @@ body {
   transition: all .3s ease-Out;
 }
 
-.button:hover #translate {
+.service-box:hover #translate {
   left: -0px;
 }
-.button p {
+.service-box p {
   position: relative;
 }
-.button:hover p {
+.service-box:hover p {
   color: #72c491;
 }
 
@@ -130,7 +148,7 @@ body {
   transform: rotateY(180deg);
 }
 
-/* ART ANIMATION STYLING */
+/* ART box*/
 .art-box {
   background: #435357;
   border-radius: 100%;
@@ -281,15 +299,22 @@ left: 0;
   .art-box {
     margin: 50px auto;
   }
+  .service-title-container {
+    width: 80%;
+    margin: 20px auto;
+  }
 }
 @media screen and (min-width: 600px){
   .flip-card {
     width: 25rem;
     margin: 20px 20px;
   }
+  .service-title-container {
+    max-width: 500px;
+  }
 }
 @media screen and (min-width: 900px){
-  .flip-card {
+  /* .flip-card {
     width: 30rem;
-  }
+  } */
 }
