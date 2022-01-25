@@ -4,22 +4,22 @@ const flipcontent = {
         'Coronas': {
             'heading': 'coronas',
             'text': 'text para coronas',
-            'img': [false, ''],
-            'video': [false, '']
+            'img': 'images/1.jpg',
+            'video': ''
     
         },
         'Puentes': {
             'heading': 'puentes',
             'text': 'text for puentes',
-            'img': [false, ''],
-            'video': [false, '']
+            'img': 'images/2.jpg',
+            'video': ''
     
         },
         'Rellenos': {
             'heading': 'rellenos',
             'text': 'text for rellenos',
-            'img': [false, ''],
-            'video': [false, '']
+            'img': 'images/3.jpg',
+            'video': ''
     
         }
     },
@@ -27,22 +27,22 @@ const flipcontent = {
         'Whitening': {
             'heading': 'whitening',
             'text': 'text para whitening',
-            'img': [false, ''],
-            'video': [false, '']
+            'img': '',
+            'video': ''
     
         },
         'cosme2': {
             'heading': 'cosme2',
             'text': 'text for cosme2',
-            'img': [false, ''],
-            'video': [false, '']
+            'img': '',
+            'video': ''
     
         },
         'cosme3': {
             'heading': 'cosme3',
             'text': 'text for cosme3',
-            'img': [false, ''],
-            'video': [false, '']
+            'img': '',
+            'video': ''
     
         }
     },
@@ -50,22 +50,22 @@ const flipcontent = {
         'Implantes': {
             'heading': 'implantes',
             'text': 'text para implantes',
-            'img': [false, ''],
-            'video': [false, '']
+            'img': '',
+            'video': ''
     
         },
         'Root Canal': {
             'heading': 'root canal',
             'text': 'text for root canal',
-            'img': [false, ''],
-            'video': [false, '']
+            'img': '',
+            'video': ''
     
         },
         'Extraccion': {
             'heading': 'extraccion',
             'text': 'text for extraccion',
-            'img': [false, ''],
-            'video': [false, '']
+            'img': '',
+            'video': ''
     
         }
     }
@@ -76,14 +76,23 @@ const flipcontent = {
 // the values in html to those db values
 
 function traceInfo(card, idcard, service){
-    // captures info from db
+    // captures heading and text from db
     var heading = flipcontent[idcard][service]['heading']
     var text = flipcontent[idcard][service]['text']
     
     // selects back part of inner card
-    var back = $(card).children().children('.flip-card-back')
+    var back = card.children().children('.flip-card-back')
     back.children('h3').html(heading)
     back.children('p').html(text)
+
+    // if img is true, then add it
+    var imgSrc = flipcontent[idcard][service]['img']
+    var imgElem = back.children('img')
+
+    imgElem.attr('src', imgSrc)
+
+    
+
 
 
 }

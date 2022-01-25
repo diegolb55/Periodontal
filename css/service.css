@@ -139,10 +139,6 @@ body {
   color: white;
   transform: rotateY(180deg);
 }
-.flip-card-back p {
-  font-size: 1.5rem;
-}
-
 
 .fliping {
   transform: rotateY(180deg);
@@ -154,8 +150,18 @@ body {
   font-size: 2rem;
   
   position: absolute;
-  left: 10px;
-  top: 10px
+  left: 20px;
+  top: 20px
+}
+#heading {
+  margin-top: 30px;
+}
+#card-img {
+  display: block;
+  object-fit: contain;
+  width: 20rem;
+  margin: 0 auto;
+
 }
 
 /* ART box*/
