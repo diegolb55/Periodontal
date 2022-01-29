@@ -4,10 +4,10 @@
     position: absolute;
     z-index: 999;
     top: 0;
-    /* right: 100px; */
-    right: 20px;
-
+    right: 0;
+    padding-top: 30px; 
     transition: all .5s ease-in-out;
+    
 
   }
   
@@ -16,7 +16,7 @@
     display: block;
     color: #435357;
     text-align: center;
-    padding: 14px 16px;
+    padding: 30px 16px;
     text-decoration: none;
     font-size: 17px;
   }
@@ -25,19 +25,13 @@
     background-color: #ddd;
     color: black;
   }
-  
-  /* .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-   */
+ 
   .topnav .icon {
+    /* border: 2px solid red; */
     display: none;
     color: #435357;
     transform: scale(1.5);
-    /* margin: 15px 50px; */
-    margin-top: 15px;
-    margin-right: 50px;
+   
   }
   
   @media screen and (max-width: 790px) {
@@ -48,8 +42,11 @@
       }
       .topnav a {display: none;}
       .topnav div.icon {
-        float: right;
         display: block;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+       
       }
   }
   
@@ -69,8 +66,8 @@
     }
     .topnav.responsive .icon {
       position: absolute;
-      right: 0;
-      top: 0;
+      right: 50px;
+      top: 50px;
     }
     .topnav.responsive a {
         color: white;
@@ -79,3 +76,7 @@
         text-align: left;
     }
   }
+
+@media screen and (max-width: 1000px) {
+
+}
