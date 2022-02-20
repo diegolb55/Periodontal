@@ -3,7 +3,7 @@ const flipcontent = {
     'card-one': {
         'Coronas': {
             'heading': 'coronas',
-            'text': 'text para coronas',
+            'text': 'Este es el text de las coronas,<br> con un resumen de proceso <br>y abajo una foto que lo <br>represente.',
             'img': 'images/1.jpg',
             'video': ''
     

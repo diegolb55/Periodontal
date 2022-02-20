@@ -34,8 +34,15 @@
    
   }
   
+
+  @media screen and (max-width: 2000px) {
+    .topnav {
+      margin-right: 50px; 
+    }
+  }
   @media screen and (max-width: 790px) {
       .topnav {
+        margin-right: 0;
         height: 50px;
         width: 50px;
         right: 0;
@@ -49,6 +56,7 @@
        
       }
   }
+  
   
   @media screen and (max-width: 790px) {
     .topnav.responsive {
@@ -77,6 +85,3 @@
     }
   }
 
-@media screen and (max-width: 1000px) {
-
-}
